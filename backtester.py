@@ -106,17 +106,6 @@ class Backtest():
         max_draw['Diff'] = max_draw['PL_Accum'] - max_draw['Max']
         max_draw['PeriodDraw_Closed'] = max_draw.groupby(max_draw['Diff'].eq(0).cumsum())['PL_Accum'] \
                                              .transform(lambda x: x.cummin()) - max_draw['Max']
-        # df = max_draw.copy().reset_index()
-        # m = []
-        # for i in df.index:
-        #     if df.iloc[i, df.columns.get_loc('PL_Accum')] == df.iloc[i, df.columns.get_loc('Max')]:
-        #         m.append(df.iloc[i, df.columns.get_loc('Diff')])
-        #     elif i == 0:
-        #         m.append(0)
-        #     else:
-        #         m.append(min(m[i - 1], df.iloc[i, df.columns.get_loc('Diff')]))
-        #
-        # max_draw['PeriodDraw_Closed'] = m
         return max_draw['PeriodDraw_Closed']
 
     def closed_max_draw(self, split=None, split_type=None):

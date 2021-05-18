@@ -7,7 +7,7 @@ all possible combinations within the parameters set forth by the user and return
 
 Finally, the engine offers a complete cross validation framework which will divide the dataset into a user-defined number of subsets on which to train and test the strategy independently. This reduces likliehood of overfitting data and provides higher likelihood of strategy performance in real practice. A workflow can be seen below:
 
-![Walk Forward](examples/k-fold cross validation example.png)
+![Crossvalidation_workflow](examples/walkforward_crossvalidation.png)
 
 ## File functionality
 1. <u><b>position_logic.py</u></b>: Contains code for calculating signals which will be used in the strategy. Also contains logic 
@@ -25,11 +25,24 @@ for determining what the entry and exit conditions will be
 	
 ## Screenshots
 
-Equity curve:
+<b>Equity curve:</b>
+
+
 ![EquityCurve](examples/equity_drawdown_output_cruve_example.PNG)
 
-Optimization Output:
+
+<b>Aggregated Metrics Output: </b>
+
+![EquityCurve](examples/agg_stats_screenshot.PNG)
+
+<b>Tabulated Trade Backtest Output: </b>
+
+![EquityCurve](examples/tabular_trade_backtest_output_screenshot.PNG)
+
+<b>Optimization Output:</b>
+
 ![Optimization](examples/Optimization_screenshot.PNG)
 
-Cross Validation Output:
+<b>Cross Validation Output:</b>
+
 ![CrossValidation](examples/cross_validation_example.PNG)

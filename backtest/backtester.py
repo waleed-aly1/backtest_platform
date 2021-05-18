@@ -1,8 +1,8 @@
 import numpy as np
 import pandas as pd
 from typing import List, Tuple, Iterator, Dict, Any, Callable, Iterable
-from time_series_split import TimeSeriesSplit
-from position_logic import position_handler
+from backtest.time_series_split import TimeSeriesSplit
+from backtest.position_logic import position_handler
 
 
 class Backtest():

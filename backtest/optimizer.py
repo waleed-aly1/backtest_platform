@@ -1,6 +1,6 @@
 import pandas as pd
-from backtester import Backtest
-from time_series_split import TimeSeriesSplit
+from backtest.backtester import Backtest
+from backtest.time_series_split import TimeSeriesSplit
 import time
 
 class Optimizer():

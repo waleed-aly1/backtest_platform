@@ -1,9 +1,9 @@
 import pandas as pd
-from position_logic import PositionLogicRange, PositionLogic
-from typing import List, Tuple, Iterator, Dict, Any, Callable, Iterable
+from backtest.position_logic import PositionLogicRange, PositionLogic
+from typing import Tuple
 import time
-from time_series_split import TimeSeriesSplit
-from backtester import Backtest
+from backtest.time_series_split import TimeSeriesSplit
+from backtest.backtester import Backtest
 import matplotlib.pyplot as plt
 from mpldatacursor import datacursor
 

@@ -2,8 +2,8 @@
 This project is a comprehensive backtesting engine to analyze trading strategies on time series data. 
 It has the ability to generate signals, define the logic which will govern trades and report key metrics on strategy performance.
 
-Additionally, the platform offers optimization capability, which allows users to define a range of parameters for intended signals and will test
-all possible combinations within the parameters set forth by the user and return comprehensive performance statists on each combination.
+Additionally, the platform offers optimization capability, which allows users to define a range of parameters for intended signals. It will test
+all possible combinations within the parameters set and return comprehensive performance statists on all combinations.
 
 Finally, the engine offers a complete cross validation framework which will divide the dataset into a user-defined number of subsets on which to train and test the strategy independently. This reduces likliehood of overfitting data and provides higher likelihood of strategy performance in real practice. A workflow can be seen below:
 
@@ -27,17 +27,15 @@ for determining what the entry and exit conditions will be
 
 <b>Equity curve:</b>
 
-
 ![EquityCurve](examples/equity_drawdown_output_cruve_example.PNG)
-
 
 <b>Aggregated Metrics Output: </b>
 
-![EquityCurve](examples/agg_stats_screenshot.PNG)
+![AggMetrics](examples/agg_stats_screenshot.PNG)
 
 <b>Tabulated Trade Backtest Output: </b>
 
-![EquityCurve](examples/tabular_trade_backtest_output_screenshot.PNG)
+![Tabulated Data](examples/tabular_trade_backtest_output_screenshot.PNG)
 
 <b>Optimization Output:</b>
 

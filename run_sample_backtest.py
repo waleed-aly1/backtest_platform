@@ -1,12 +1,12 @@
 import pandas as pd
-from position_logic import PositionLogic, PositionFunction, entry_signal_function, exit_signal_function, \
+from backtest.position_logic import PositionLogic, PositionFunction, entry_signal_function, exit_signal_function, \
     SignalFunction, PositionLogicRange, PositionFunctionRange, SignalFunctionRange
-from optimizer import Optimizer
-import moving_linear_regression as mlr
-from cross_validation import plot_equity_curve, CrossValidate
-from backtester import Backtest
+from backtest.optimizer import Optimizer
+import backtest.moving_linear_regression as mlr
+from backtest.cross_validation import plot_equity_curve, CrossValidate
+from backtest.backtester import Backtest
 
-rbe1597 = pd.read_excel('rbe1597.xlsx', index_col='DateTime')
+rbe1597 = pd.read_excel('./data/rbe1597.xlsx', index_col='DateTime')
 
 mlr_signal_function = SignalFunction(mlr.moving_linear_regression, (40,), {'descending': False}, name='MLR')
 slope_signal_function = SignalFunction(mlr.slope, (4,), {'descending': False}, name='Slope')

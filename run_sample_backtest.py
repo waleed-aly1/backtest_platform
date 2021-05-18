@@ -30,7 +30,10 @@ compact_data = backtester_example.tabular_trades()
 print('FinishedTabularTrades')
 
 stats_df.to_csv('BackTestResultsExampleOutput.csv')
+compact_data.to_csv('BackTestResultsCompactOutput.csv')
 
+agg_stats_df = pd.DataFrame.from_dict(aggstats, orient='index')
+agg_stats_df.to_csv('BackTestResultsAggStats.csv')
 
 # Optimization area
 print('Starting Optimiaztion')

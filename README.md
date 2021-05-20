@@ -1,11 +1,11 @@
 ## Introduction
-This project is a comprehensive backtesting engine to analyze trading strategies on time series data. 
+This project is a comprehensive back testing engine to analyze algorithmic trading strategies on time series data. 
 It has the ability to generate signals, define the logic which will govern trades and report key metrics on strategy performance.
 
 Additionally, the platform offers optimization capability, which allows users to define a range of parameters for intended signals. It will test
-all possible combinations within the parameters set and return comprehensive performance statists on all combinations.
+all possible combinations within the parameters set and return comprehensive performance statists on each permutation.
 
-Finally, the engine offers a complete cross validation framework which will divide the dataset into a user-defined number of subsets on which to train and test the strategy independently. This reduces likliehood of overfitting data and provides higher likelihood of strategy performance in real practice. A workflow can be seen below:
+Finally, the engine offers a complete cross validation framework which will divide the dataset into a user-defined number of subsets, on which to train and test the strategy independently. This reduces likelihood of overfitting data and increases probability of strategy performance in live practice. A workflow can be seen below:
 
 ![Crossvalidation_workflow](examples/walkforward_crossvalidation.png)
 

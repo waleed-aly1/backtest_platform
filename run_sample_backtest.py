@@ -39,9 +39,9 @@ agg_stats_df.to_csv('BackTestResultsAggStats.csv')
 print('Starting Optimiaztion')
 
 mlr_range = SignalFunctionRange(mlr.moving_linear_regression, (range(5,100,5),), {'descending':False},name='MLR')
-slope_range = SignalFunctionRange(mlr.slope, (range(2,11),), {'descending':False},name='Slope')
-entry_range = PositionFunctionRange(entry_signal_function,(), offset=True)
-exit_range = PositionFunctionRange(exit_signal_function,(), offset=True)
+slope_range = SignalFunctionRange(mlr.slope, (range(2, 11),), {'descending':False}, name='Slope')
+entry_range = PositionFunctionRange(entry_signal_function, (), offset=True)
+exit_range = PositionFunctionRange(exit_signal_function, (), offset=True)
 mlr_cross_holder = PositionLogicRange(signal_function_range_list=[mlr_range, slope_range],
                                       entry_function_range=entry_range, exit_function_range=exit_range)
 mlr_cross_strategy_logic = list(mlr_cross_holder.position_logic_generator())
@@ -51,7 +51,7 @@ opt_results = Optimizer(rbe1597, split=('06-1-2014', '12-9-2018'),
 opt_results.to_csv('OptimzedResultsOutputExample.csv')
 
 
-wf_df2 = CrossValidate(rbe1597, mlr_cross_strategy_logic, (30, 2),timeseries_split=('12-16-2015','12-9-2018'), timeseries_split_type='DateRange', tick_size=1, tick_value=4.2).walk_forward()
+wf_df2 = CrossValidate(rbe1597, mlr_cross_holder, (30, 2), timeseries_split=('12-16-2015', '12-9-2018'), timeseries_split_type='DateRange', tick_size=1, tick_value=4.2).walk_forward()
 
 wf_df2.to_csv('WalkForwardResultsExampleOutput.csv')
 
